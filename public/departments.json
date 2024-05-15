@@ -1,0 +1,22 @@
+
+[
+    {
+      "deptid": "it",
+      "name": "Information Technology",
+      "numStudents": 100,
+      "faculty": [
+        { "name": "John Doe", "position": "Professor" },
+        { "name": "Jane Smith", "position": "Assistant Professor" }
+      ]
+    },
+    {
+      "deptid": "CS",
+      "name": "Computer Science",
+      "numStudents": 120,
+      "faculty": [
+        { "name": "Alice Johnson", "position": "Associate Professor" },
+        { "name": "Bob Williams", "position": "Lecturer" }
+      ]
+    }
+  ]
+  

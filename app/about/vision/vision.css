@@ -1,0 +1,43 @@
+
+.vision-container {
+    padding: 20px;
+  }
+  
+  .homepage-section {
+    margin-bottom: 20px;
+  }
+  
+
+  .content-section h2 {
+    color: #333; 
+    margin-bottom: 15px; 
+    font-size: 24px; 
+  }
+  
+ 
+  .content-section p {
+    color: #666; 
+    line-height: 1.6;
+  }
+  
+ 
+  .content-section ul {
+    list-style-type: disc; 
+    margin-left: 20px; 
+  }
+  
+ 
+  .content-section li {
+    margin-bottom: 8px; 
+  }
+  
+  
+  .content-section a {
+    color: #007bff; 
+    text-decoration: none; 
+  }
+  
+  .content-section a:hover {
+    text-decoration: underline; 
+  }
+  
