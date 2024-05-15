@@ -1,16 +1,25 @@
-
-import React from 'react'
+import React from 'react';
+import Image from 'next/image'; 
 import './accreditations.css'; 
-
+import naac from '../naac.jpg'
+import nirf from '../nirf.webp'
 
 const Accreditations = () => { 
   return ( 
-    <div >
-      <div className="image-section"> <br></br>
-       <center> <img src='https://cleverground.com/wp-content/uploads/2021/12/LMS-Future-of-Online-Education.-10.jpg' alt="Accreditation" /></center>
+    <div>
+      <div className="image-section">
+        <br />
+        <center>
+        
+        <Image src={naac} alt="Accreditation" width={500} height={400} />
+        </center>
       </div> 
-      <div className="image-section"> <br></br>
-       <center> <img src='https://www.financialexpress.com/wp-content/uploads/2023/06/nirf.webp' alt="Accreditation" /></center>
+      <div className="image-section">
+        <br />
+        <center>
+          
+          <Image src={nirf} alt="Accreditation" width={500} height={400} />
+        </center>
       </div> 
     </div>
   ); 

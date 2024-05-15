@@ -1,18 +1,19 @@
+import React from 'react';
+import Image from 'next/image'; 
+import './governance.css';
+import gov from '../gov.jpg'
 
-import React from 'react'
-import './Governance.css'; 
-
-const Governance = () => { 
-  return ( 
-    <div > 
-     
-      <div className="image-section"> <br></br>
-      
-       <center> <img src='https://aec.edu.in/Organogram_%20institution/Organogram_%20institution.jpg' alt="Accreditation" /></center>
-      </div> 
-     
+const Governance = () => {
+  return (
+    <div>
+      <div className="image-section">
+        <br />
+        <center>
+            <Image src={gov} alt="Accreditation" width={800} height={600}/>
+        </center>
+      </div>
     </div>
-  ); 
-} 
+  );
+};
 
 export default Governance;
