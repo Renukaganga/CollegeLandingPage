@@ -5,15 +5,16 @@ import './dept.css';
 export default function Deptid({ params }: { params: { deptid: string } }) {
   return (
     <>
-     
+     <br></br>
       <div className="container">
         <h1 className="mt-5">
-          Department of <span className="dept">{params.deptid}</span>
+         Department of <span className="dept">{params.deptid}</span><br></br>
         </h1>
         <hr />
         <div className="row mt-4">
           <div className="col">
             <p>
+              <br></br>
               The Department of <span className="dept">{params.deptid}</span> is established with the inception of the college in the year 2001. It administers bachelor's programs in <span className="dept">{params.deptid}</span> with an intake of 180 students, as well as master's programs in <span className="dept">{params.deptid}</span> with an intake of 30 students.
             </p>
             <p>

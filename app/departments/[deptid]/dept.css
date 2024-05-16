@@ -4,9 +4,15 @@ body {
   }
   
   .container {
-    max-width: 95%;
+    margin-left: 200px;
+    max-width: 75%;
     margin: 0 auto;
+    margin-left: 220px;
     padding: 20px;
+    flex-grow: 1;
+    display: flex; /* Add this line */
+    flex-direction: column; /* Add this line */
+    padding: 10px;
   }
   
   .content {

@@ -42,6 +42,12 @@ const Navbar = () => {
               <Link href="/departments/CSE(Cyber)">CSE(Cyber Security)</Link>
             </div>
           </li>
+          <li>
+            <Link href="/branches">Branches</Link>
+          </li>
+          <li>
+            <Link href="/login">Login</Link>
+          </li>
         </ul>
       </nav>
     </Layout>
