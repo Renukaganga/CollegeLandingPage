@@ -14,7 +14,7 @@ export default function Contact() {
             <div className="contactPage">
                 <div className="header">
                     <h1>Contact Us</h1>
-                    <p>We'd love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.</p>
+                    <p>We would love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out.</p>
                 </div>
 
                 <div className="contactInfo">
@@ -24,7 +24,7 @@ export default function Contact() {
                     </div>
                     <div className="contactItem">
                         <FontAwesomeIcon icon={faPhone} className="icon" />
-                        <span>Phone: 088162 50864</span>
+                       Phone: 088162 50864
                     </div>
                     <div className="contactItem">
                         <FontAwesomeIcon icon={faEnvelope} className="icon" />
