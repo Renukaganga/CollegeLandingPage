@@ -8,8 +8,16 @@ const LoginForm = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const storedUsername = localStorage.getItem('username');
     const storedPassword = localStorage.getItem('password');
     
@@ -30,11 +38,11 @@ const LoginForm = () => {
       <form onSubmit={handleLogin}>
         <div>
           <label>Username:</label>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <input type="text" value={username} onChange={handleUsernameChange} />
         </div>
         <div>
           <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" value={password} onChange={handlePasswordChange} />
         </div>
         <button type="submit">Login</button>
         {error && <p className="error-message">Error</p>}
