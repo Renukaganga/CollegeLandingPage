@@ -48,6 +48,12 @@ const Navbar = () => {
           <li>
             <Link href="/login">Login</Link>
           </li>
+          <li>
+            <Link href="/signup">Sign Up</Link>
+          </li>
+          <li>
+            <Link href="/students">Students</Link>
+          </li>
         </ul>
       </nav>
     </Layout>

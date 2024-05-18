@@ -1,0 +1,41 @@
+/* signup.css */
+.formContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .formContainer label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .formContainer input[type="text"],
+  .formContainer input[type="email"],
+  .formContainer input[type="tel"],
+  .formContainer input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .formContainer button {
+    width: 100%;
+    padding: 10px;
+    background-color: #30b7c1;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .formContainer button:hover {
+    background-color: #0056b3;
+  }
+  

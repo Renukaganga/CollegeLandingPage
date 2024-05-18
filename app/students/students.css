@@ -1,0 +1,49 @@
+/* styles.css */
+.user-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 200px;
+  }
+  
+  .user-card {
+    background-color: #8be5eb;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    /* Adjust width based on your layout requirements */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    padding-left: 100px;
+  }
+  
+  .user-card h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color:black;
+  }
+  
+  .user-card p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .user-card strong {
+    font-weight: bold;
+    color: #222222;
+  }
+  
+  @media (max-width: 768px) {
+    .user-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .user-card {
+      width: calc(100% - 20px);
+    }
+  }
+  

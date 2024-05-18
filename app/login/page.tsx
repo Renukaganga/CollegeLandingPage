@@ -1,32 +1,45 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import './login.css';
+import UserCard from './usercard';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [userData, setUserData] = useState(null);
 
-  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleUsernameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setUsername(e.target.value);
   };
 
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
 
-  const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleLogin = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const storedUsername = localStorage.getItem('username');
-    const storedPassword = localStorage.getItem('password');
-    
-    if (username === storedUsername && password === storedPassword) {
-      console.log('login successful');
-      setSuccess(true);
-      setError(false);
-      // Redirect or perform actions for successful login
-    } else {
+
+    try {
+      const response = await fetch('https://jsonplaceholder.typicode.com/users');
+      const usersData = await response.json();
+
+      
+      const loggedInUser = usersData.find((user: { username: string; email: string }) => user.username === username && user.email === password);
+
+      if (loggedInUser) {
+        console.log('login successful');
+        setSuccess(true);
+        setError(false);
+        setUserData(usersData); 
+      
+      } else {
+        setError(true);
+        setSuccess(false);
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
       setError(true);
       setSuccess(false);
     }
@@ -44,9 +57,12 @@ const LoginForm = () => {
           <label>Password:</label>
           <input type="password" value={password} onChange={handlePasswordChange} />
         </div>
-        <button type="submit">Login</button>
-        {error && <p className="error-message">Error</p>}
-        {success && <p className="success">Successfully logged in</p>}
+        <button className="btn" type="submit">Login</button>
+        
+        {error && <p className="error-message">Invalid username or password</p>}
+        <div className='user-card-container'>
+        {success && userData && <UserCard users={userData} />} 
+        </div>
       </form>
     </div>
   );
